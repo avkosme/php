@@ -25,7 +25,7 @@ listen = ${listen}
 ; must be separated by a comma. If this value is left blank, connections will be
 ; accepted from any ip address.
 ; Default Value: any
-listen.allowed_clients = ${listen_allowed_clients}
+;listen.allowed_clients = ${listen_allowed_clients}
 
 ; Set permissions for unix socket, if one is used. In Linux, read/write
 ; permissions must be set in order to allow connections from a web server. Many
