@@ -6,7 +6,7 @@ RUN yum install -y 	php php-mysql php-fpm
 RUN systemctl enable php-fpm
 
 ADD assets/www.conf.sh /opt/www.conf.sh
-RUN -c 'chmod +x /opt/www.conf.sh'
+RUN /bin/bash -c 'chmod +x /opt/www.conf.sh'
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
