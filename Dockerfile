@@ -1,7 +1,12 @@
 FROM avkosme/centos	
 
-RUN yum install -y epel-release
-RUN yum install -y 	php php-mysql php-fpm
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+RUN yum install -y yum-utils
+RUN yum-config-manager --enable remi-php72
+RUN yum install -y php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
+
+RUN yum install -y 	php-fpm
 
 RUN systemctl enable php-fpm
 
